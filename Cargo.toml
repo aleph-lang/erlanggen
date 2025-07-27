@@ -1,0 +1,16 @@
+[package]
+name = "erlanggen"
+version = "0.1.0"
+edition = "2021"
+license-file="LICENSE"
+repository="https://github.com/aleph-lang/erlanggen"
+description="Erlang generator."
+
+[profile.dev]
+opt-level = 3
+
+[profile.release]
+opt-level = 3 
+
+[dependencies]
+aleph-syntax-tree = "0.1.1"
