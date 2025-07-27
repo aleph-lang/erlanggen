@@ -1,0 +1,2 @@
+# erlanggen
+Erlang generator
