@@ -13,4 +13,4 @@ opt-level = 3
 opt-level = 3 
 
 [dependencies]
-aleph-syntax-tree = "0.1.1"
+aleph-syntax-tree = "0.1.4"
