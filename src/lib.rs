@@ -46,7 +46,7 @@ fn gen(ast: at, indent: i64) -> String {
             e => format!("{}{} = {},\n{}", c_indent, var, gen(*value, 0), gen(e, indent)),
         },
         at::LetRec{name, args, body} => format!("{}{}({}) ->\n{}.",
-            c_indent, name, aleph_syntax_tree::gen_list_expr(args, gen), gen(*body, indent+1)),
+            c_indent, name, aleph_syntax_tree::gen_list_expr_sep(args, gen, ", "), gen(*body, indent+1)),
         at::Get{array_name, elem} => format!("{}lists:nth({} + 1, {})", c_indent, gen(*elem, 0), array_name),
         at::Put{array_name, elem, value, insert} => {
             if insert == "true" {
